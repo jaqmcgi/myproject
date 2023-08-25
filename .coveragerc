@@ -6,7 +6,7 @@ source =
 [run]
 branch = true
 source =
-    my_first_telegram_chatbot
+    myproject
 parallel = true
 
 [report]

@@ -1,24 +1,24 @@
 Python Package Skeleton Template
 ================================
 
-.. image:: https://github.com/jaqmcgi/my_first_telegram_chatbot/workflows/ci/badge.svg?branch=main
-    :target: https://github.com/jaqmcgi/my_first_telegram_chatbot/actions?workflow=ci
+.. image:: https://github.com/jaqmcgi/myproject/workflows/ci/badge.svg?branch=main
+    :target: https://github.com/jaqmcgi/myproject/actions?workflow=ci
     :alt: CI
 
-.. image:: https://codecov.io/gh/jaqmcgi/my_first_telegram_chatbot/branch/main/graph/badge.svg
-    :target: https://codecov.io/gh/jaqmcgi/my_first_telegram_chatbot
+.. image:: https://codecov.io/gh/jaqmcgi/myproject/branch/main/graph/badge.svg
+    :target: https://codecov.io/gh/jaqmcgi/myproject
     :alt: Codecov
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
-   :target: https://codeclimate.com/github/jaqmcgi/my_first_telegram_chatbot/maintainability
+   :target: https://codeclimate.com/github/jaqmcgi/myproject/maintainability
    :alt: Maintainability
 
-.. image:: https://img.shields.io/codeclimate/tech-debt/jaqmcgi/my_first_telegram_chatbot
-    :target: https://codeclimate.com/github/jaqmcgi/my_first_telegram_chatbot
+.. image:: https://img.shields.io/codeclimate/tech-debt/jaqmcgi/myproject
+    :target: https://codeclimate.com/github/jaqmcgi/myproject
     :alt: Code Climate technical debt
 
-.. image:: https://img.shields.io/readthedocs/my_first_telegram_chatbot/latest?label=Read%20the%20Docs
-    :target: https://my_first_telegram_chatbot.readthedocs.io/en/latest/index.html
+.. image:: https://img.shields.io/readthedocs/myproject/latest?label=Read%20the%20Docs
+    :target: https://myproject.readthedocs.io/en/latest/index.html
     :alt: Read the Docs
 
 Summary
@@ -79,7 +79,7 @@ recommend reading his `blog post`_ and references herein.
 
 I configured the CI pipeline to my needs by taking bits and pieces from many
 places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_; two primary
-sources of information for the *my_first_telegram_chatbot* repository, especially
+sources of information for the *myproject* repository, especially
 in the first versions using Travis and Appveyor.
 
 When migrating to GitHub Actions, I based my choices on the version bump and
@@ -131,16 +131,16 @@ v0.0.1
 .. _bump2version: https://github.com/c4urself/bump2version
 .. _cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
 .. _cookiecutter: https://cookiecutter.readthedocs.io/en/latest/index.html
-.. _discussion: https://github.com/jaqmcgi/my_first_telegram_chatbot/discussions
-.. _documentation: https://my_first_telegram_chatbot.readthedocs.io/
+.. _discussion: https://github.com/jaqmcgi/myproject/discussions
+.. _documentation: https://myproject.readthedocs.io/
 .. _even for scientific software: https://github.com/MolSSI/cookiecutter-cms
 .. _hypothesis: https://hypothesis.readthedocs.io/en/latest/
 .. _ionel: https://github.com/ionelmc
-.. _issue: https://github.com/jaqmcgi/my_first_telegram_chatbot/issues
-.. _latest branch: https://github.com/jaqmcgi/my_first_telegram_chatbot/tree/latest
-.. _master branch: https://github.com/jaqmcgi/my_first_telegram_chatbot/tree/master
+.. _issue: https://github.com/jaqmcgi/myproject/issues
+.. _latest branch: https://github.com/jaqmcgi/myproject/tree/latest
+.. _master branch: https://github.com/jaqmcgi/myproject/tree/master
 .. _pdb-tools: https://github.com/haddocking/pdb-tools/blob/2a070bbacee9d6608b44bb6d2f749beefd6a7690/.github/workflows/bump-version-on-push.yml
-.. _project's documentation: https://my_first_telegram_chatbot.readthedocs.io/en/latest/index.html
+.. _project's documentation: https://myproject.readthedocs.io/en/latest/index.html
 .. _pytest: https://docs.pytest.org/en/stable/
 .. _python-nameless: https://github.com/ionelmc/python-nameless
 .. _structlog: https://github.com/hynek/structlog

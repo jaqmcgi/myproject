@@ -1,5 +1,5 @@
 """Test main command-line client."""
-from my_first_telegram_chatbot.cli_int1 import main
+from myproject.cli_int1 import main
 
 
 def test_main():

@@ -53,8 +53,8 @@ version = release = '0.0.1'
 pygments_style = 'trac'
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/jaqmcgi/my_first_telegram_chatbot/issues/%s', '#'),  # noqa: E501
-    'pr': ('https://github.com/jaqmcgi/my_first_telegram_chatbot/pull/%s', 'PR #'),  # noqa: E501
+    'issue': ('https://github.com/jaqmcgi/myproject/issues/%s', '#'),  # noqa: E501
+    'pr': ('https://github.com/jaqmcgi/myproject/pull/%s', 'PR #'),  # noqa: E501
     }
 
 # codecov io closes connection if host is accessed too repetitively.
@@ -62,13 +62,13 @@ extlinks = {
 # in the .travis.yml file
 # see https://github.com/codecov/codecov-python/issues/158
 linkcheck_ignore = [
-    r'https://codecov.io/gh/jaqmcgi/my_first_telegram_chatbot/*',
+    r'https://codecov.io/gh/jaqmcgi/myproject/*',
     ]
 
 html_theme = "sphinx_py3doc_enhanced_theme"
 html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
 html_theme_options = {
-    'githuburl': 'https://github.com/jaqmcgi/my_first_telegram_chatbot',
+    'githuburl': 'https://github.com/jaqmcgi/myproject',
     }
 
 html_use_smartypants = True

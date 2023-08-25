@@ -3,7 +3,7 @@ Package interface.
 
 This is the main package interface.
 """
-from my_first_telegram_chatbot import cli_int1
+from myproject import cli_int1
 
 
 if __name__ == '__main__':

@@ -35,7 +35,7 @@ long_description = '{}\n{}'.format(
     )
 
 setup(
-    name='my_first_telegram_chatbot',
+    name='myproject',
     version='0.0.1',
     description='My very first chatbot.',
     long_description=long_description,
@@ -69,11 +69,11 @@ setup(
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
-        'webpage': 'https://github.com/jaqmcgi/my_first_telegram_chatbot ',
-        'Documentation': 'https://my_first_telegram_chatbot .readthedocs.io/en/latest/',
-        'Changelog': 'https://github.com/jaqmcgi/my_first_telegram_chatbot/blob/master/CHANGELOG.rst',
-        'Issue Tracker': 'https://github.com/jaqmcgi/my_first_telegram_chatbot/issues',
-        'Discussion Forum': 'https://github.com/jaqmcgi/my_first_telegram_chatbot/discussions',
+        'webpage': 'https://github.com/jaqmcgi/myproject ',
+        'Documentation': 'https://myproject .readthedocs.io/en/latest/',
+        'Changelog': 'https://github.com/jaqmcgi/myproject/blob/master/CHANGELOG.rst',
+        'Issue Tracker': 'https://github.com/jaqmcgi/myproject/issues',
+        'Discussion Forum': 'https://github.com/jaqmcgi/myproject/discussions',
         },
     keywords=[
         'ci', 'continuous-integration', 'telegram', 'chatbot',
@@ -96,7 +96,7 @@ setup(
         ],
     entry_points={
         'console_scripts': [
-            'samplecli1= my_first_telegram_chatbot.cli_int1:main',
+            'samplecli1= myproject.cli_int1:main',
             ]
         #
         },

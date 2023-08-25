@@ -1,6 +1,6 @@
 """Performs general tests."""
 import amodule
-from my_first_telegram_chatbot.libs import samplemodule as SM
+from myproject.libs import samplemodule as SM
 
 
 def test_amodule():

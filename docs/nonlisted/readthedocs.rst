@@ -55,5 +55,5 @@ documentation build, the PR won't pass the CI tests.
 .. _Sphinx: http://www.sphinx-doc.org/en/master/
 .. _Sphinx Themes: https://sphinx-themes.org/
 .. _sphinx-py3doc-enhanced-theme: https://github.com/ionelmc/sphinx-py3doc-enhanced-theme
-.. _latest Github tag: https://github.com/jaqmcgi/my_first_telegram_chatbot/tags
+.. _latest Github tag: https://github.com/jaqmcgi/myproject/tags
 .. _instructions: https://docs.readthedocs.io/en/stable/guides/google-analytics.html

@@ -1,13 +1,13 @@
 Libs
 ====
 
-.. automodule:: my_first_telegram_chatbot.libs
+.. automodule:: myproject.libs
     :members:
     :undoc-members:
 
 Something
 ---------
 
-.. automodule:: my_first_telegram_chatbot.libs.samplemodule
+.. automodule:: myproject.libs.samplemodule
     :members:
     :undoc-members:

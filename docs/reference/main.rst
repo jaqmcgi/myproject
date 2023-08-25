@@ -1,10 +1,10 @@
-my_first_telegram_chatbot
+myproject
 =============
 
 .. testsetup::
 
-    from my_first_telegram_chatbot import *
+    from myproject import *
 
-.. automodule:: my_first_telegram_chatbot
+.. automodule:: myproject
     :members:
 

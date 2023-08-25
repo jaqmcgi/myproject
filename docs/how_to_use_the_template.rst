@@ -1,7 +1,7 @@
 How to use this template
 ========================
 
-You can use the ``my_first_telegram_chatbot`` as a template for your own
+You can use the ``myproject`` as a template for your own
 repositories thanks to the `template feature of GitHub
 <https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template>`_,
 *(Yes, you could use a cookiecutter, but this is not a coockiecutter).*
@@ -29,23 +29,23 @@ you need to change in the files to adapt the template to you and your project:
 ``setup.py`` and in ``AUTHORS.rst`` there is also my full written name, rename
 it to yours.
 
-2. Where ever it says ``my_first_telegram_chatbot`` change it for the name of your project.
+2. Where ever it says ``myproject`` change it for the name of your project.
 That is, what you would like your users to import.
 
 .. code::
 
-    import my_first_telegram_chatbot
+    import myproject
 
-3. In ``setup.py`` rename :code:`my_first_telegram_chatbot` for the name your project will
+3. In ``setup.py`` rename :code:`myproject` for the name your project will
 have at PyPI. Usually this is the same as the name you decided above.
 
-4. Replace ``my_first_telegram_chatbot`` to the name of the repository of your
+4. Replace ``myproject`` to the name of the repository of your
 project. It might be the same name as the Python package and the PyPI package,
 that is up to you entirely.
 
 5. This template is deployed at ``test.pypi.org``. You need to change the last
 line of the `version-bump-and-package.yml
-<https://github.com/jaqmcgi/my_first_telegram_chatbot/blob/master/.github/workflows/version-bump-and-package.yml>`_
+<https://github.com/jaqmcgi/myproject/blob/master/.github/workflows/version-bump-and-package.yml>`_
 file and remove the ``--repository testpypi`` tag so that your project is
 deployed at the main PyPI repository.
 

@@ -9,4 +9,4 @@ Installation Example
 
 At the command line::
 
-    pip install my_first_telegram_chatbot
+    pip install myproject

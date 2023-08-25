@@ -6,5 +6,5 @@ Thank you for contributing to this project! Before you submit a Pull Request:
 * summarize the approach used to address the issue
 
 
-.. _contribution guidelines: https://github.com/jaqmcgi/my_first_telegram_chatbot/blob/latest/docs/CONTRIBUTING.rst
-.. _issue: https://github.com/jaqmcgi/my_first_telegram_chatbot/issues
+.. _contribution guidelines: https://github.com/jaqmcgi/myproject/blob/latest/docs/CONTRIBUTING.rst
+.. _issue: https://github.com/jaqmcgi/myproject/issues

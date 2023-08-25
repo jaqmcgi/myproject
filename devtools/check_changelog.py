@@ -24,7 +24,7 @@ with open(changelog, 'r') as fin:
                 '',
                 'CHANGELOG.rst not updated:',
                 'Please add a summary of your additions as described in:',
-                'https://my_first_telegram_chatbot.readthedocs.io'
+                'https://myproject.readthedocs.io'
                 '/en/latest/contributing.html#update-changelog.',
                 '',
                 ]
