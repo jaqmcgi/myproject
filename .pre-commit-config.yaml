@@ -1,0 +1,1020 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+fail_fast: true
+exclude: 'ESP/frontend/dist/'
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: check-yaml
+    -   id: check-case-conflict
+    -   id: check-ast
+    -   id: debug-statements
+    -   id: fix-encoding-pragma
+
+    -   id: check-json
+    -   id: check-shebang-scripts-are-executable
+    -   id: pretty-format-json
+    -   id: check-merge-conflict
+    -   id: check-symlinks
+    -   id: check-executables-have-shebangs
+    -   id: check-docstring-first
+
+
+    # PARA MAS ADELANTE
+    # -   id: vulture - Find unused Python code.
+    # -   id: double-quote-string-fixer
+    # -   id: check-builtin-literals
+
+    # DESCARTADOS:
+    # -   id: check-added-large-files - Porque en este proyecto se están añadiendo los ficheros
+    # 	      			      compilados del frontend a git. Por eso salen ficheros muy grandes
+    # 				      y no pasa este check.
+
+
+
+
+# INCLUIDOS ARRIBA
+# -   id: check-case-conflict - checks for files that would conflict in case-insensitive filesystems.
+# -   id: check-ast - simply checks whether the files parse as valid python.
+# -   id: check-builtin-literals - requires literal syntax when initializing empty or zero python builtin types.
+# -   id: check-docstring-first - checks a common error of defining a docstring after code.
+# -   id: debug-statements - checks for debugger imports and py37+ `breakpoint()` calls in python source.
+# -   id: double-quote-string-fixer - replaces double quoted strings with single quoted strings.
+# -   id: fix-encoding-pragma - adds # -*- coding: utf-8 -*- to the top of python files.
+
+# check-executables-have-shebangs - ensures that (non-binary) executables have a shebang.
+# check-json - checks json files for parseable syntax.
+# check-shebang-scripts-are-executable - ensures that (non-binary) files with a shebang are executable.
+# pretty-format-json - sets a standard for formatting json files.
+# check-merge-conflict - checks for files that contain merge conflict strings.
+# check-symlinks - checks for symlinks which do not point to anything.
+
+
+# PENDIENTES DE INCLUIR
+# check-added-large-files - prevents giant files from being committed.
+# check-ast - simply checks whether the files parse as valid python.
+# check-byte-order-marker - forbids files which have a utf-8 byte-order marker.
+# check-builtin-literals - requires literal syntax when initializing empty or zero python builtin types.
+# check-docstring-first - checks a common error of defining a docstring after code.
+# check-toml - checks toml files for parseable syntax.
+# check-vcs-permalinks - ensures that links to vcs websites are permalinks.
+# check-xml - checks xml files for parseable syntax.
+# check-yaml - checks yaml files for parseable syntax.
+# debug-statements - checks for debugger imports and py37+ `breakpoint()` calls in python source.
+# destroyed-symlinks - detects symlinks which are changed to regular files with a content of a path which that symlink was pointing to.
+# detect-aws-credentials - detects *your* aws credentials from the aws cli credentials file.
+# detect-private-key - detects the presence of private keys.
+# double-quote-string-fixer - replaces double quoted strings with single quoted strings.
+# end-of-file-fixer - ensures that a file is either empty, or ends with one newline.
+# file-contents-sorter - sorts the lines in specified files (defaults to alphabetical). you must provide list of target files as input in your .pre-commit-config.yaml file.
+# fix-byte-order-marker - removes utf-8 byte order marker.
+# fix-encoding-pragma - adds # -*- coding: utf-8 -*- to the top of python files.
+# forbid-new-submodules - prevents addition of new git submodules.
+# forbid-submodules - forbids any submodules in the repository
+# mixed-line-ending - replaces or checks mixed line ending.
+# name-tests-test - verifies that test files are named correctly.
+# no-commit-to-branch - don't commit to branch
+# requirements-txt-fixer - sorts entries in requirements.txt.
+# sort-simple-yaml - sorts simple yaml files which consist only of top-level keys, preserving comments and blocks.
+# trailing-whitespace - trims trailing whitespace.
+
+# github.com/pre-commit/mirrors-autopep8
+# autopep8
+
+# github.com/pre-commit/mirrors-clang-format
+# clang-format
+
+# github.com/pre-commit/mirrors-csslint
+# csslint
+
+# github.com/pre-commit/mirrors-eslint
+# eslint
+
+# github.com/pre-commit/mirrors-fixmyjs
+# fixmyjs
+
+# github.com/pre-commit/mirrors-jshint
+# jshint
+
+# github.com/pre-commit/mirrors-mypy
+# mypy
+
+# github.com/pre-commit/mirrors-prettier
+# prettier
+
+# github.com/pre-commit/mirrors-puppet-lint
+# puppet-lint
+
+# github.com/pre-commit/mirrors-scss-lint
+# scss-lint - scss_lint
+
+# github.com/pre-commit/mirrors-yapf
+# yapf
+
+# github.com/pre-commit/pygrep-hooks
+# python-check-blanket-noqa - Enforce that `noqa` annotations always occur with specific codes. Sample annotations: `# noqa: F401`, `# noqa: F401,W203`
+# python-check-blanket-type-ignore - Enforce that `# type: ignore` annotations always occur with specific codes. Sample annotations: `# type: ignore[attr-defined]`, `# type: ignore[attr-defined, name-defined]`
+# python-check-mock-methods - Prevent common mistakes of `assert mck.not_called()`, `assert mck.called_once_with(...)` and `mck.assert_called`.
+# python-no-eval - A quick check for the `eval()` built-in function
+# python-no-log-warn - A quick check for the deprecated `.warn()` method of python loggers
+# python-use-type-annotations - Enforce that python3.6+ type annotations are used instead of type comments
+# rst-backticks - Detect common mistake of using single backticks when writing rst
+# rst-directive-colons - Detect mistake of rst directive not ending with double colon or space before the double colon
+# rst-inline-touching-normal - Detect mistake of inline code touching normal text in rst
+# text-unicode-replacement-char - Forbid files which have a UTF-8 Unicode replacement character
+# github.com/pre-commit/sync-pre-commit-deps
+# sync-pre-commit-deps - Sync pre-commit hook dependencies based on other installed hooks
+
+# github.com/FalconSocial/pre-commit-mirrors-pep257
+# pep257
+
+# github.com/FalconSocial/pre-commit-python-sorter
+# python-import-sorter - This hook sorts python imports.
+
+# github.com/MarketSquare/robotframework-tidy
+# robotidy - RobotFramework source code formatter
+
+# github.com/guykisel/prospector-mirror
+# prospector - This hook runs Prospector: https://github.com/landscapeio/prospector
+
+# github.com/asottile/add-trailing-comma
+# add-trailing-comma - Automatically add trailing commas to calls and literals.
+
+# github.com/asottile/pyupgrade
+# pyupgrade - Automatically upgrade syntax for newer versions.
+
+# github.com/asottile/reorder-python-imports
+# reorder-python-imports - This hook reorders imports in python files.
+
+# github.com/asottile/yesqa
+# yesqa - Automatically remove unnecessary `# noqa` comments
+
+# github.com/asottile/dead
+# dead - dead simple python dead code detection
+
+# github.com/asottile/setup-cfg-fmt
+# setup-cfg-fmt - apply a consistent format to `setup.cfg` files
+
+# github.com/asottile/cheetah_lint
+# cheetah-reorder-imports - This hook reorders imports in cheetah files.
+# cheetah-flake - Lint cheetah code using flake8 and some other checks.
+
+# github.com/digitalpulp/pre-commit-php
+# php-lint-all - Check PHP Syntax on ALL PHP staged files with user friendly messages and colors
+# php-lint - Runs php -l on all staged PHP files. Exits when it hits the first errored file
+# php-unit - Run the full php unit test. Checks which PHPUnit executable is available first and then runs it. Preference order is vendor/bin, phpunit and phpunit.phar.
+# php-cs - Run php codesniffer against all staged PHP files.
+# php-cbf - Run php codesniffer against all staged PHP files.
+# php-cs-fixer - Run php coding standards fixer against all staged PHP files.
+# php-stan - Run PHPStan against all staged PHP files.
+
+# github.com/elidupuis/mirrors-jscs
+# jscs
+
+# github.com/elidupuis/mirrors-sass-lint
+# sass-lint
+
+# github.com/jumanjihouse/pre-commit-hooks
+# bundler-audit - Check for vulnerable gem versions and insecure sources
+# check-mailmap - Detect if an email address needs to be added to mailmap
+# fasterer - Use fasterer to suggest speed improvements in Ruby
+# forbid-binary - Forbid binary files from being committed
+# forbid-space-in-indent - Forbid spaces in indentation
+# git-check - Use git to check for conflict markers and core.whitespace errors, respecting .gitattributes
+# git-dirty - Detect if git tree contains modified, staged, or untracked files
+# markdownlint - Check markdown files and flag style issues
+# protect-first-parent - Protect first parent from foxtrot merges
+# reek - Use reek to find ruby code smells
+# require-ascii - Ensure file is ascii-encoded
+# rubocop - Enforce Ruby style guide with rubocop and rubocop-rspec
+# shellcheck - Shell scripts conform to shellcheck
+# script-must-have-extension - Non-executable shell script filename ends in .sh
+# script-must-not-have-extension - Executable shell script omits the filename extension
+# shfmt - Check shell style with shfmt
+# github.com/jumanjihouse/pre-commit-hook-yamlfmt
+# yamlfmt - Format YAML files
+# github.com/Lucas-C/pre-commit-hooks
+# forbid-crlf - Forbid files containing CRLF end-lines to be committed
+# remove-crlf - Replace CRLF end-lines by LF ones before committing
+# forbid-tabs - Forbid files containing tabs to be committed
+# remove-tabs - Replace tabs by whitespaces before committing
+# chmod - Set file permissions
+# insert-license - Insert a short license disclaimer as a header comment in source files
+
+# github.com/Lucas-C/pre-commit-hooks-go
+# checkmake - Makefile linter/analyzer
+
+# github.com/Lucas-C/pre-commit-hooks-java
+# validate-html - HTML syntax validator using W3C v.Nu checker, with support for handlebars/jinja2 templates
+
+# github.com/Lucas-C/pre-commit-hooks-lxml
+# forbid-html-img-without-alt-text - List every <img> tag without a alt= or data-ng-attr-alt= attribute
+# forbid-non-std-html-attributes - Detect any non-standard attribute that is not prefixed with data-
+# detect-missing-css-classes - Detect unused or missing CSS classes definitions, and abort if any of the later ones is found
+# html-tags-blacklist - Forbid some HTML tags
+# html-attributes-blacklist - Forbid some HTML attributes
+
+# github.com/Lucas-C/pre-commit-hooks-markup
+# rst-linter - Check .rst files with the same linter used by pypi.org
+
+# github.com/Lucas-C/pre-commit-hooks-nodejs
+# htmlhint - NodeJS HTML syntax linter (htmlhint)
+# htmllint - NodeJS HTML syntax linter (htmllint)
+# dockerfile_lint - Dockerfile linter
+# markdown-toc - Insert a table of contents in Markdown files, like a README.md
+
+# github.com/Lucas-C/pre-commit-hooks-safety
+# python-safety-dependencies-check - Analyze your Python requirements for known security vulnerabilities
+
+# github.com/chriskuehl/puppet-pre-commit-hooks
+# bolt-validate - Validate syntax of Bolt plans
+# epp-validate - Validate syntax of Puppet EPP templates
+# erb-validate - Validate syntax of Ruby ERB templates
+# g10k-validate - Validate syntax of Puppetfile using g10k
+# puppet-lint - Check Puppet manifests for stylistic problems
+# puppet-validate - Validate syntax of Puppet manifests
+# r10k-validate - Validate syntax of Puppetfile using r10k
+# ruby-validate - Validate syntax of ruby code
+
+# github.com/golangci/golangci-lint
+# golangci-lint - Fast linters runner for Go.
+# github.com/Bahjat/pre-commit-golang
+# go-fmt-import - Runs `goimport,gofmt`, requires golang
+# go-vet - Runs `go vet`, requires golang
+# go-lint - Runs `go lint`, requires golang
+# go-unit-tests - Runs `go test`, requires golang
+# gofumpt - Runs `gofumpt`, requires github.com/mvdan/gofumpt
+# go-err-check - Runs `errcheck`, requires github.com/kisielk/errcheck
+# go-static-check - Runs `staticcheck`, install https://staticcheck.io/docs/
+# golangci-lint - Runs `golangci-lint`, install https://github.com/golangci/golangci-lint
+# go-ruleguard - Runs `go-ruleguard`, install https://github.com/quasilyte/go-ruleguard
+
+# github.com/dnephin/pre-commit-golang
+# go-fmt - Runs `gofmt`, requires golang
+# go-imports - Runs `goimports`, requires golang
+# go-vet - Runs `go vet`, requires golang
+# go-lint - Runs `golint`, requires https://github.com/golang/lint
+# go-cyclo - Runs `gocyclo`, requires https://github.com/fzipp/gocyclo
+# validate-toml - Runs `tomlv`, requires https://github.com/BurntSushi/toml/tree/master/cmd/tomlv"
+# no-go-testing - Checks that no files are using `testing.T`, if you want developers to use a different testing framework
+# gometalinter
+# golangci-lint - Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint
+# go-critic - Runs `go-critic`, requires https://github.com/go-critic/go-critic
+# go-unit-tests - Runs `go test`
+# go-build - Runs `go build`, requires golang
+# go-generate - Runs `go generate`, requires golang
+# go-mod-tidy - Runs `go mod tidy -v`, requires golang
+# go-mod-vendor - Runs `go mod vendor`, requires golang
+# github.com/troian/pre-commit-golang
+# go-fmt - Runs `gofmt`, requires golang
+# go-imports - Runs `goimports`, requires golang
+# go-vet - Runs `go vet`, requires golang
+# go-lint - Runs `golint`, requires https://github.com/golang/lint
+# go-metalinter - Runs `gometalinter`, requires https://github.com/alecthomas/gometalinter
+# go-build - Makes sure Go code can build
+# go-build-plugin - Makes sure Go code can build package as plugin
+
+# github.com/jstewmon/check-swagger
+# check-swagger - Hook to validate swagger specs.
+
+# github.com/detailyang/pre-commit-shell
+# shell-lint - Check Shell Syntax on ALL staged files with user friendly messages and colors
+
+# github.com/lovesegfault/beautysh
+# beautysh - A Bash beautifier for the masses. https://pypi.python.org/pypi/beautysh
+
+# github.com/antonbabenko/pre-commit-terraform
+# infracost_breakdown - Check terraform infrastructure cost
+# terraform_fmt - Rewrites all Terraform configuration files to a canonical format.
+# terraform_docs - Inserts input and output documentation into README.md (using terraform-docs).
+# terraform_docs_without_aggregate_type_defaults - Inserts input and output documentation into README.md (using terraform-docs). Identical to terraform_docs.
+# terraform_docs_replace - Overwrite content of README.md with terraform-docs.
+# terraform_validate - Validates all Terraform configuration files.
+# terraform_providers_lock - Updates provider signatures in dependency lock files.
+# terraform_tflint - Validates all Terraform configuration files with TFLint.
+# terragrunt_fmt - Rewrites all Terragrunt configuration files to a canonical format.
+# terragrunt_validate - Validates all Terragrunt configuration files.
+# terraform_tfsec - Static analysis of Terraform templates to spot potential security issues.
+# checkov - Runs checkov on Terraform templates.
+# terraform_checkov - Runs checkov on Terraform templates.
+# terraform_wrapper_module_for_each - Generate Terraform wrappers with for_each in module.
+# terrascan - Runs terrascan on Terraform templates.
+# tfupdate - Runs tfupdate on Terraform templates.
+# github.com/ansible-community/ansible-lint
+# ansible-lint - This hook runs ansible-lint.
+# github.com/doublify/pre-commit-clang-format
+# clang-format - Format files with ClangFormat.
+# github.com/doublify/pre-commit-go
+# fmt - Format files with go fmt.
+# vet - Check files with go vet.
+# fix - Fix files with go fix.
+# github.com/doublify/pre-commit-hindent
+# hindent - Format files with hindent.
+# github.com/doublify/pre-commit-rust
+# fmt - Format files with cargo fmt.
+# cargo-check - Check the package for errors.
+# clippy - Lint rust sources
+
+# github.com/awebdeveloper/pre-commit-stylelint
+# stylelint
+
+# github.com/awebdeveloper/pre-commit-tslint
+# tslint
+
+# github.com/adrienverge/yamllint
+# yamllint - This hook runs yamllint.
+
+# github.com/thlorenz/doctoc
+# doctoc
+
+# github.com/noahsark769/xcodeproj-sort-pre-commit-hook
+# xcodeproj-sort - This hook sorts your .xcodeproj file
+
+# github.com/jorisroovers/gitlint
+# gitlint - Checks your git commit messages for style.
+# gitlint-ci - gitlint
+
+# github.com/psf/black
+# black - Black: The uncompromising Python code formatter
+# black-jupyter - Black: The uncompromising Python code formatter (with Jupyter Notebook support)
+
+# github.com/IamTheFij/ansible-pre-commit
+# encryption-check - Checks that vault files are encrypted
+
+# github.com/IamTheFij/docker-pre-commit
+# docker-compose-check - Checks that docker compose files are valid
+
+# github.com/mattlqx/pre-commit-ruby
+# rubocop - Enforce Ruby style guide with rubocop
+# rspec - Run rspec in changed paths with spec directories
+# foodcritic - Enforce Chef style guide with foodcritic
+# cookstyle - Enforce Chef style guide with cookstyle
+# chef-cookbook-version - Ensure Chef cookbook versions are bumped when contents are changed
+
+# github.com/mattlqx/pre-commit-sign
+# sign-commit - Hashes some fields of the commit and adds a signature for verification by other systems
+
+# github.com/mattlqx/pre-commit-search-and-replace
+# search-and-replace - Search and replace strings
+
+# github.com/pryorda/dockerfilelint-precommit-hooks
+# dockerfilelint - Dockerfile linter
+
+# github.com/alessandrojcm/commitlint-pre-commit-hook
+# commitlint - Commitlint hook
+# commitlint-travis - Lint all relevant commits for a change or PR on Travis CI
+
+# github.com/henryykt/pre-commit-perl
+# perlcritic - Runs `perlcritic`, requires script in PATH
+# perltidy - Runs `perltidy`, requires script in PATH
+# perlimports - Runs `perlimports --inplace-edit`, requires script in PATH
+# perlimports-lint - Runs `perlimports --lint`, requires script in PATH
+
+# github.com/juancarlospaco/pre-commit-nim
+# nimble-check - nimble check
+# nim-check - nim check
+
+# github.com/aws-cloudformation/cfn-lint
+# cfn-python-lint - cfn-lint is a tool for finding issues with CloudFormation templates
+# cfn-lint - cfn-lint is a tool for finding issues with CloudFormation templates
+# cfn-lint-rc - cfn-lint is a tool for finding issues with CloudFormation templates
+
+# github.com/thoughtworks/talisman
+# talisman-commit - talisman
+# talisman-push - talisman
+
+# github.com/PyCQA/flake8
+# flake8 - `flake8` is a command-line utility for enforcing style consistency across Python projects.
+# github.com/PyCQA/bandit
+# bandit - Bandit is a tool for finding common security issues in Python code
+
+# github.com/PyCQA/pydocstyle
+# pydocstyle - pydocstyle is a static analysis tool for checking compliance with Python docstring conventions.
+
+# github.com/PyCQA/pylint
+# pylint
+
+# github.com/PyCQA/doc8
+# doc8 - This hook runs doc8 for linting docs
+# github.com/PyCQA/prospector
+# prospector - Analyze Python code using Prospector
+# github.com/PyCQA/isort
+# isort
+# github.com/PyCQA/docformatter
+# docformatter - Formats docstrings to follow PEP 257.
+# docformatter-venv - Formats docstrings to follow PEP 257. Uses python3 -m venv.
+# github.com/PyCQA/autoflake
+# autoflake
+# github.com/miki725/importanize
+# importanize - Organize python imports
+# github.com/motet-a/jinjalint
+# jinjalint - A linter which checks the indentation and the correctness of Jinja-like/HTML templates.
+# github.com/milin/giticket
+# giticket - Utility to prepend your commits with info from your branch.
+# github.com/milin/gitown
+# gitown - Keep your CODEOWNERS file up to date to streamline code review process.
+# github.com/sqlalchemyorg/zimports
+# zimports - Python import rewriter
+# github.com/peterdemin/pip-compile-multi
+# pip-compile-multi-verify - pip-compile-multi verify
+# github.com/homebysix/pre-commit-macadmin
+# check-autopkg-recipe-list - This hook checks AutoPkg recipe lists (in txt, plist, yaml, or json format) for common issues.
+# check-autopkg-recipes - This hook checks AutoPkg recipes to ensure they contain required top-level keys.
+# check-git-config-email - This hook checks to ensure the Git config email matches one of the specified domains.
+# check-jamf-extension-attributes - This hook checks Jamf extension attributes for common issues.
+# check-jamf-profiles - This hook checks Jamf profiles for common issues.
+# check-jamf-scripts - This hook checks Jamf scripts for common issues.
+# check-munki-pkgsinfo - This hook checks Munki pkginfo files to ensure they are valid.
+# check-munkiadmin-scripts - This hook ensures MunkiAdmin scripts are executable.
+# check-munkipkg-buildinfo - This hook checks MunkiPkg build-info files to ensure they are valid.
+# check-outset-scripts - This hook checks Outset scripts to ensure they're executable.
+# check-plists - This hook checks XML property list (plist) files for basic syntax errors.
+# check-preference-manifests - This hook checks preference manifest plists for inconsistencies and common issues.
+# forbid-autopkg-overrides - This hook prevents AutoPkg overrides from being added to the repo.
+# forbid-autopkg-trust-info - This hook prevents AutoPkg recipes with trust info from being added to the repo.
+# munki-makecatalogs - This hook runs the "makecatalogs" command to ensure all referenced packages are present and catalogs are up to date.
+# github.com/fortman/pre-commit-prometheus
+# check-config - Check prometheus config files
+# check-rules - Check prometheus rule files
+# test-rules - Unit test prometheus rule files
+# github.com/syntaqx/git-hooks
+# circleci-config-validate - Test if the CircleCI config is well formed.
+# go-fmt - Runs `go fmt` and asserts no changes are needed.
+# go-test - Runs `go test` and asserts no tests are failing.
+# go-mod-tidy - Runs `go mod tidy` to ensure `go.mod` matches the project source.
+# go-generate - Runs `go generate` against the projects go files.
+# forbid-binary - Forbid binary files from being committed
+# shellcheck - Shell scripts conform to shellcheck
+# shfmt - Check shell style with shfmt
+# github.com/lunarmodules/luacheck
+# luacheck - Lint and static analysis of Lua code
+# github.com/Koihik/LuaFormatter
+# luaformatter - Format Lua code to a set style
+# github.com/Calinou/pre-commit-luacheck
+# luacheck - Lints Lua files using Luacheck.
+# github.com/belminf/pre-commit-chef
+# cookstyle - Chef-specific Rubocop linting with Cookstyle
+# foodcritic - Chef cookbook linting with Foodcritic
+# github.com/pocc/pre-commit-hooks
+# clang-format - Formats C, C++, Objective-C, and Java code
+# clang-tidy - Find warnings/errors in C, C++, and Objective-C code
+# oclint - Find warnings/errors in C, C++, and Objective-C code
+# uncrustify - Formats C, C++, Objective-C, Java, D, and Vala code
+# cppcheck - Find warnings/errors in C, C++, and Objective-C code
+# cpplint - Find warnings/errors in C/CPP code
+# include-what-you-use - Runs Include-What-You-Use (iwyu) in C/CPP code
+# github.com/dwightgunning/pre-commit-nglint
+# nglint - Runs ng lint
+# github.com/codespell-project/codespell
+# codespell - Checks for common misspellings in text files.
+# gitlab.com/smop/pre-commit-hooks
+# check-poetry - Validates the structure of the pyproject.toml file
+# check-gitlab-ci - Validates .gitlab-ci.yml file
+# github.com/seddonym/import-linter
+# import-linter - Import Linter allows you to define and enforce rules for the internal and external imports within your Python project.
+# github.com/marco-c/taskcluster_yml_validator
+# taskcluster_yml - Checks for validity of .taskcluster.yml file.
+# github.com/rstcheck/rstcheck
+# rstcheck
+# github.com/lorenzwalthert/precommit
+# roxygenize - run `roxygen2::roxygenize()`
+# use-tidy-description - run `usethis::use_tidy_description()`
+# style-files - style files with {styler}
+# no-browser-statement - check if a .R file contains a `browser()` statement
+# no-debug-statement - check if a .R file contains a `debug()` or `debugonce()` statement
+# parsable-R - check if a .R file is parsable
+# readme-rmd-rendered - make sure README.Rmd hasn't been edited more recently than `README.md`
+# codemeta-description-updated - make sure `codemeta.json` is in sync with `DESCRIPTION`. It should be run after use-tidy-description
+# spell-check - perform a spell check with `spelling::spell_check_files()`
+# deps-in-desc - Check if dependencies that can be parsed from code are in `DESCRIPTION`
+# lintr - check if a `.R` file is lint free (using {lintr})
+# pkgdown - check if your {pkgdown} config file has the correct entries for references and articles
+# github.com/FelixSeptem/pre-commit-golang
+# bazel-buildifier - Runs `buildifier`, requires bazel buildifier
+# go-imports - Runs `go imports`, requires golang
+# go-critic - Runs `go-critic`, requires go-critic
+# golangci-lint - Runs `golangci-lint`, requires golangci-lint
+# golangci-lint-conf - Runs `golangci-lint` read local config file, requires golangci-lint
+# go-mod-tidy - Runs `go mod tidy` make sure latest and avaliable go mod file
+# gitlab.com/daverona/pre-commit/cpp
+# clang-format - Run `clang-format` against C/C++ header and source files
+# cpplint - Run `cpplint` against C/C++ header and source files
+# cppcheck - Run `cppcheck` against C/C++ source files
+# docker-clang-format - Run `clang-format` against C/C++ header and source files in Docker container
+# docker-cpplint - Run `cpplint` against C/C++ header and source files in Docker container
+# docker-cppcheck - Run `cppcheck` against C/C++ source files in Docker container
+# github.com/codingjoe/relint
+# relint - Write your own linting rules using regular expressions.
+# github.com/nix-community/nixpkgs-fmt
+# nixpkgs-fmt - Format nix code with nixpkgs-fmt.
+# github.com/d6e/beancount-check
+# beancount-check
+# gitlab.com/iamlikeme/nbhooks
+# nb-ensure-clean - Ensure that committed Jupyter notebooks contain no outputs.
+# github.com/Vimjas/vint
+# vint - Lints all vim files
+# github.com/eschulte/lisp-format
+# lisp-format - Run lisp-format against lisp files
+# github.com/shellcheck-py/shellcheck-py
+# shellcheck - Test shell scripts with shellcheck
+# github.com/APIDevTools/swagger-cli
+# swagger-validation - Hook to validate swagger specs.
+# github.com/kynan/nbstripout
+# nbstripout - nbstripout: strip output from Jupyter and IPython notebooks
+# gitlab.com/devopshq/gitlab-ci-linter
+# gitlab-ci-linter - Validates .gitlab-ci.yml file (pure-python version without dependencies)
+# github.com/bmorcos/pre-commit-hooks-cpp
+# clang-format - Format C code using clang-format.
+# cpplint - Check style of C code using cpplint.
+# cppcheck - Check correctness of C code using cppcheck.
+# github.com/igorshubovych/markdownlint-cli
+# markdownlint - Checks the style of Markdown/Commonmark files.
+# markdownlint-fix - Fixes the style of Markdown/Commonmark files.
+# markdownlint-docker - Checks the style of Markdown/Commonmark files.
+# markdownlint-fix-docker - Fixes the style of Markdown/Commonmark files.
+# github.com/TekWizely/pre-commit-golang
+# my-cmd - Run '$ARGS[0] [$ARGS[1:]] $FILE' for each staged .go file
+# my-cmd-mod - Run 'cd $(mod_root $FILE); $ARGS[0] [$ARGS[1:]] ./...' for each staged .go file
+# my-cmd-pkg - Run '$ARGS[0] [$ARGS[1:]] ./$(dirname $FILE)' for each staged .go file
+# my-cmd-repo - Run '$ARGS[0] [$ARGS[1:]]' in the repo root folder
+# my-cmd-repo-mod - Run 'cd $(mod_root); $ARGS[0] [$ARGS[1:]] /...' for each module in the repo
+# my-cmd-repo-pkg - Run '$ARGS[0] [$ARGS[1:]] ./...' in repo root folder
+# go-build-mod - Run 'cd $(mod_root $FILE); go build -o /dev/null [$ARGS] ./...' for each staged .go file
+# go-build-pkg - Run 'go build -o /dev/null [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-build-repo-mod - Run 'cd $(mod_root); go build -o /dev/null [$ARGS] ./...' for each module in the repo
+# go-build-repo-pkg - Run 'go build -o /dev/null [$ARGS] ./...' in repo root folder
+# go-critic - Run 'gocritic check [$ARGS] $FILE' for each staged .go file
+# go-fmt - Run 'gofmt -l -d [$ARGS] $FILE' for each staged .go file
+# go-fmt-repo - Run 'gofmt -l -d [$ARGS] .' in repo root folder
+# go-fumpt - Run 'fumpt -l -d [$ARGS] $FILE' for each staged .go file
+# go-fumpt-repo - Run 'fumpt -l -d [$ARGS] .' in repo root folder
+# go-imports - Run 'goimports -l -d [$ARGS] $FILE' for each staged .go file
+# go-imports-repo - Run 'goimports -l -d [$ARGS] .' in repo root folder
+# go-lint - Run 'golint -set_exit_status [$ARGS] $FILE' for each staged .go file
+# go-mod-tidy - Run 'cd $(mod_root $FILE); go mod tidy [$ARGS]' for each staged .go file
+# go-mod-tidy-repo - Run 'cd $(mod_root); go mod tidy [$ARGS]' for each module in the repo
+# go-returns - Run 'goreturns -l -d [$ARGS] $FILE' for each staged .go file
+# go-returns-repo - Run 'goreturns -l -d [$ARGS] .' in repo root folder
+# go-revive - Run 'revive [$ARGS] $FILE' for each staged .go file
+# go-revive-mod - Run 'cd $(mod_root $FILE); revive [$ARGS] ./...' for each staged .go file
+# go-revive-repo-mod - Run 'cd $(mod_root); revive [$ARGS] ./...' for each module in the repo
+# go-sec-mod - Run 'cd $(mod_root $FILE); gosec [$ARGS] ./...' for each staged .go file
+# go-sec-pkg - Run 'gosec [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-sec-repo-mod - Run 'cd $(mod_root); gosec [$ARGS] ./...' for each module in the repo
+# go-sec-repo-pkg - Run 'gosec [$ARGS] ./...' in repo root folder
+# go-staticcheck-mod - Run 'cd $(mod_root $FILE); staticcheck [$ARGS] ./...' for each staged .go file
+# go-staticcheck-pkg - Run 'staticcheck [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-staticcheck-repo-mod - Run 'cd $(mod_root); staticcheck [$ARGS] ./...' for each module in the repo
+# go-staticcheck-repo-pkg - Run 'staticcheck [$ARGS] ./...' in repo root folder
+# go-structslop-mod - Run 'cd $(mod_root $FILE); structslop [$ARGS] ./...' for each staged .go file
+# go-structslop-pkg - Run 'structslop [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-structslop-repo-mod - Run 'cd $(mod_root); structslop [$ARGS] ./...' for each module in the repo
+# go-structslop-repo-pkg - Run 'structslop [$ARGS] ./...' in repo root folder
+# go-test-mod - Run 'cd $(mod_root $FILE); go test [$ARGS] ./...' for each staged .go file
+# go-test-pkg - Run 'go test [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-test-repo-mod - Run 'cd $(mod_root); go test [$ARGS] ./...' for each module in the repo
+# go-test-repo-pkg - Run 'go test [$ARGS] ./...' in repo root folder
+# go-vet-mod - Run 'cd $(mod_root $FILE); go vet [$ARGS] ./...' for each staged .go file
+# go-vet-pkg - Run 'go vet [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# go-vet-repo-mod - Run 'cd $(mod_root); go vet [$ARGS] ./...' for each module in the repo
+# go-vet-repo-pkg - Run 'go vet [$ARGS] ./...' in repo root folder
+# go-vet - Run 'go vet [$ARGS] $FILE' for each staged .go file
+# golangci-lint-mod - Run 'cd $(mod_root $FILE); golangci-lint run [$ARGS] ./...' for each staged .go file
+# golangci-lint-pkg - Run 'golangci-lint run [$ARGS] ./$(dirname $FILE)' for each staged .go file
+# golangci-lint-repo-mod - Run 'cd $(mod_root); golangci-lint run [$ARGS] ./...' for each module in the repo
+# golangci-lint-repo-pkg - Run 'golangci-lint run [$ARGS] ./...' in repo root folder
+# golangci-lint - Run 'golangci-lint run [$ARGS] $FILE' for each staged .go file
+# github.com/markdownlint/markdownlint
+# markdownlint - Run markdownlint on your Markdown files
+# markdownlint_docker - Run markdown lint on your Markdown files using the project docker image
+# github.com/jguttman94/pre-commit-gradle
+# gradle-check - Runs java unit tests using gradle check
+# gradle-build - Builds java project using "gradle build"
+# gradle-spotless - Lints the project using "gradle spotlessCheck spotlessApply"
+# gradle-task - Runs arbitrary gradle tasks for java project
+# github.com/Yelp/detect-secrets
+# detect-secrets - Detects high entropy strings that are likely to be passwords.
+# github.com/dmitri-lerko/pre-commit-docker-kustomize
+# kustomize - kustomize provided by docker
+# github.com/perltidy/perltidy
+# perltidy - Run the perltidy source code formatter on Perl source files
+# github.com/talos-systems/conform
+# conform - Run 'conform enforce' for policy enforcement
+# github.com/twu/skjold
+# skjold - Security audit Python project dependencies against security advisory databases.
+# github.com/commitizen-tools/commitizen
+# commitizen - Check whether the current commit message follows commiting rules. Allow empty commit messages by default, because they typically indicate to Git that the commit should be aborted.
+# commitizen-branch - Check all commit messages that are already on the current branch but not the default branch on the origin repository. Useful for checking messages after the fact (e.g., pre-push or in CI) without an expensive check of the entire repository history.
+# github.com/gherynos/pre-commit-java
+# pmd - Runs the PMD static code analyzer.
+# cpd - Runs the Copy/Paste Detector (CPD).
+# checkstyle - Runs the Checkstyle static code analysis tool.
+# github.com/lietu/go-pre-commit
+# errcheck - Check your Go source code with errcheck
+# go-fmt-goimports - Format your Go code with go fmt and goimports
+# go-test - Run your Go unit tests
+# go-vet - Check your Go source with go vet
+# gofumports - Format your Go code with gofumports
+# gofumpt - Format your Go code with gofumpt
+# golangci-lint - Check your Go code with golangci-lint
+# golint - Check your Go code with golint
+# staticcheck - Check your Go code with staticcheck
+# go-mod-tidy - Prune no-longer required commits from go.mod
+# github.com/macisamuele/language-formatters-pre-commit-hooks
+# pretty-format-golang - Runs gofmt over golang source files.
+# pretty-format-ini - This hook sets a standard for formatting INI files.
+# pretty-format-java - Runs Google Java Formatter over Java source files
+# pretty-format-kotlin - Runs KTLint over Kotlin source files
+# pretty-format-rust - Runs cargo fmt over Rust source files
+# pretty-format-toml - This hook sets a standard for formatting TOML files.
+# pretty-format-yaml - This hook sets a standard for formatting YAML files.
+# github.com/jlebar/pre-commit-hooks
+# bazel-buildifier - Runs `buildifier`, requires buildifier binary
+# do-not-submit - Forbids the string "DO NOT SUBMIT".
+# clang-format-diff
+# clang-format-whole-file
+# clang-format-diff-3.6.0
+# clang-format-whole-file-3.6.0
+# clang-format-diff-3.7.0
+# clang-format-whole-file-3.8.0
+# clang-format-diff-3.9.0
+# clang-format-whole-file-3.9.0
+# clang-format-diff-4.0.0
+# clang-format-whole-file-4.0.0
+# clang-format-diff-5.0.0
+# clang-format-whole-file-5.0.0
+# clang-format-diff-8.0.0
+# clang-format-whole-file-8.0.0
+# clang-format-diff-11.0.0
+# clang-format-whole-file-11.0.0
+# clang-format-diff-15.0.0
+# clang-format-whole-file-15.0.0
+# github.com/jazzband/pip-tools
+# pip-compile - Automatically compile requirements.
+# github.com/pappasam/toml-sort
+# toml-sort
+# toml-sort-fix
+# github.com/arenadotio/pre-commit-ocamlformat
+# ocamlformat - Auto-formatter for OCaml code
+# github.com/hcodes/yaspeller
+# yaspeller
+# github.com/maltzj/google-style-precommit-hook
+# google-style-java - Formats code in Google's Java codestyle.
+# github.com/jvstein/pre-commit-dotnet-format
+# dotnet-format
+# github.com/PeterMosmans/jenkinslint
+# jenkinslint - Validates Jenkinsfiles using a Jenkins server
+# github.com/nicklockwood/SwiftFormat
+# swiftformat - Check swift files for formating issues with SwiftFormat
+# github.com/executablebooks/mdformat
+# mdformat - CommonMark compliant Markdown formatter
+# gitlab.com/daverona/pre-commit/php
+# phpmd - Run `phpmd` to find possible bugs, suboptimal code, overcomplicated expressions, and so on
+# docker-phpmd - Run `phpmd` to find possible bugs, suboptimal code, overcomplicated expressions, and so on
+# github.com/anderseknert/pre-commit-opa
+# opa-test - Runs OPA unit tests on rego source files
+# opa-fmt - Formats Rego policy using opa fmt
+# opa-check - Check syntax of staged Rego files
+# conftest-test - Run `conftest test` on staged config files
+# conftest-fmt - Run `conftest fmt` on staged Rego files
+# conftest-verify - Run `conftest verify` on rego files
+# github.com/radix-ai/auto-smart-commit
+# auto-smart-commit - Automatically transform your Git commit messages into Jira smart commits
+# github.com/thibaudcolas/curlylint
+# curlylint - A linter which checks the indentation and the correctness of Jinja-like/HTML templates.
+# github.com/cheshirekow/cmake-format-precommit
+# cmake-format - cmake-format can format your listfiles nicely so that they don't look like crap.
+# cmake-lint - cmake-lint will check your listfiles for style violations, common mistakes, and anti-patterns.
+# github.com/aorumbayev/pydantic-to-schema
+# pydantic-to-schema - Converts models from input path to output path as schemas
+# github.com/hadialqattan/pycln
+# pycln - A formatter for finding and removing unused import statements.
+# github.com/nbQA-dev/nbQA
+# nbqa - Run any standard Python code quality tool on a Jupyter Notebook
+# nbqa-black - Run 'black' on a Jupyter Notebook
+# nbqa-check-ast - Run 'check-ast' on a Jupyter Notebook
+# nbqa-flake8 - Run 'flake8' on a Jupyter Notebook
+# nbqa-isort - Run 'isort' on a Jupyter Notebook
+# nbqa-mypy - Run 'mypy' on a Jupyter Notebook
+# nbqa-pylint - Run 'pylint' on a Jupyter Notebook
+# nbqa-pyupgrade - Run 'pyupgrade' on a Jupyter Notebook
+# nbqa-yapf - Run 'yapf' on a Jupyter Notebook
+# nbqa-autopep8 - Run 'autopep8' on a Jupyter Notebook
+# nbqa-pydocstyle - Run 'pydocstyle' on a Jupyter Notebook
+# nbqa-ruff - Run 'ruff' on a Jupyter Notebook
+# github.com/Scony/godot-gdscript-toolkit
+# gdlint - gdlint - linter for GDScript
+# gdformat - gdformat - formatter for GDScript
+# github.com/avilaton/add-msg-issue-prefix-hook
+# add-msg-issue-prefix - Searches the branch name for something looking like a jira issue name and prepends the commit message with it
+# github.com/dustinsand/pre-commit-jvm
+# detekt - Runs the Detekt static code analyzer on Kotlin source files.
+# google-java-formatter-jdk8 - Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 8.
+# google-java-formatter-jdk11 - Runs the Google Java Formatter on Java source files. Minimum supported runtime version is JDK 11.
+# ktlint - Runs the ktlint linter and formatter on Kotlin source files.
+# pmd - Runs the PMD static code analyzer on Java source files.
+# github.com/alan-turing-institute/CleverCSV-pre-commit
+# clevercsv-standardize - CleverCSV Standardize
+# gitlab.com/jvenom/elixir-pre-commit-hooks
+# mix-format - Formats Elixir files with mix format.
+# mix-test - Runs Elixir tests with mix test.
+# github.com/Cretezy/flutter-format-pre-commit
+# flutter-format - Format Flutter Code
+# github.com/dluksza/flutter-analyze-pre-commit
+# flutter-analyze - Flutter Code Analyze
+# dart-format - Dart Code format
+# github.com/fluttercommunity/import_sorter
+# dart-import-sorter - Dart package to automatically organize your dart imports. Any dart project supported! Will sort imports alphabetically and then group them in the following order: 1. Dart imports 2. Flutter imports 3. Package imports 4. Project imports
+# flutter-import-sorter - Dart package to automatically organize your dart imports. Any dart project supported! Will sort imports alphabetically and then group them in the following order: 1. Dart imports 2. Flutter imports 3. Package imports 4. Project imports
+# github.com/editorconfig-checker/editorconfig-checker.python
+# editorconfig-checker - `editorconfig-checker` is a tool to check if your files consider your .editorconfig-rules.
+# editorconfig-checker-system - Runs system executable of `editorconfig-checker` to lint text files according to `.editorconfig` rules
+# gitlab.com/pablodiehl/pre-commit-lua-formatter
+# lua-formatter - Formats Lua files using Lua Formatter.
+# github.com/frnmst/md-toc
+# md-toc - Automatically generate and add a table of contents to markdown files
+# github.com/mgedmin/check-manifest
+# check-manifest - Check the completeness of MANIFEST.in for Python packages.
+# github.com/ecugol/pre-commit-hooks-django
+# check-untracked-migrations - Forbid untracked Django migrations
+# check-unapplied-migrations - Check unapplied migrations with manage.py migrate --check
+# check-absent-migrations - Check absent migrations with manage.py makemigrations --check --dry-run
+# po-location-format - Changes location format for .po files
+# github.com/PrincetonUniversity/blocklint
+# blocklint - `blocklint` is a command-line utility for inclusive language highlighting.
+# github.com/python-jsonschema/check-jsonschema
+# check-jsonschema - Validate JSON or YAML files against a jsonschema on disk or fetched via HTTP(S)
+# check-metaschema - Validate JSON Schema files against their matching metaschema
+# check-azure-pipelines - Validate Azure Pipelines config against the schema provided by Microsoft
+# check-bamboo-spec - Validate Bamboo Specs against the schema provided by SchemaStore
+# check-bitbucket-pipelines - Validate Bitbucket Pipelines against the schema provided by SchemaStore
+# check-buildkite - Validate Buildkite Pipelines against the schema provided by Buildkite
+# check-dependabot - Validate Dependabot Config (v2) against the schema provided by SchemaStore
+# check-github-actions - Validate GitHub Actions against the schema provided by SchemaStore
+# check-github-workflows - Validate GitHub Workflows against the schema provided by SchemaStore
+# check-gitlab-ci - Validate GitLab CI config against the schema provided by SchemaStore
+# check-readthedocs - Validate ReadTheDocs config against the schema provided by ReadTheDocs
+# check-renovate - Validate Renovate config against the schema provided by Renovate (does not support renovate config in package.json)
+# check-travis - Validate Travis Config against the schema provided by SchemaStore
+# github.com/sirosen/texthooks
+# fix-smartquotes - Replace "smartquote" characters with regular quotes
+# fix-ligatures - Replace ligature characters with normalized individual characters
+# fix-spaces - Replace non-breaking spaces and other characters with the standard space character
+# forbid-bidi-controls - Check for lines of text which contain bidirectional text control characters
+# macro-expand - Perform simple macro replacements in text files
+# github.com/snok/pep585-upgrade
+# upgrade-type-hints - Upgrades type hints to new types introduced in PEP 585
+# github.com/jendrikseipp/vulture
+# github.com/mwouts/jupytext
+# jupytext - Runs jupytext on all notebooks and paired files.
+# github.com/ejba/pre-commit-maven
+# maven - Runs arbitrary maven commands for java projects
+# maven-test - Runs maven test build lifecycle
+# maven-compile - Runs maven compile build lifecycle
+# maven-checkstyle - Runs maven checkstyle build lifecycle
+# maven-spotless-check - Runs spotless:check goal
+# maven-spotless-apply - Runs spotless:apply goal
+# github.com/tfsec/tfsec
+# tfsec - TFsec is a tool to statically analyze Terraform templates to spot potential security issues.
+# tfsec-docker - TFsec is a tool to statically analyze Terraform templates to spot potential security issues, uses projects official docker image.
+# tfsec-system - TFsec is a tool to statically analyze Terraform templates to spot potential security issues, uses systems installed tfsec.
+# github.com/yoheimuta/protolint
+# protolint - Runs protolint to lint Protocol Buffer files
+# protolint-docker - Runs protolint Docker image to lint Protocol Buffer files
+# github.com/hadolint/hadolint
+# hadolint-docker - Runs hadolint Docker image to lint Dockerfiles
+# hadolint - Runs hadolint to lint Dockerfiles
+# github.com/google/go-jsonnet
+# jsonnet-format - Automatically format jsonnet files.
+# jsonnet-lint - Lint jsonnet files.
+# github.com/google/yamlfmt
+# yamlfmt - This hook uses github.com/google/yamlfmt to format yaml files. Requires golang >1.18 to be installed.
+# github.com/guid-empty/flutter-dependency-validation-pre-commit
+# flutter-dependency-validation - Pubspec.yaml dependencies validation
+# github.com/cpplint/cpplint
+# cpplint - Static code analysis of C/C++ files
+# github.com/MarcoGorelli/absolufy-imports
+# absolufy-imports - Automatically convert relative imports to absolute
+# github.com/MarcoGorelli/auto-walrus
+# auto-walrus - Automatically use the walrus operator!
+# github.com/MarcoGorelli/cython-lint
+# cython-lint - Lint Cython files
+# double-quote-cython-strings - replaces single-quoted strings with double-quoted strings.
+# github.com/domdfcoding/flake2lint
+# flake2lint - Augment Flake8 noqa comments with PyLint comments.
+# github.com/dotnet/format
+# dotnet-format - dotnet format
+# github.com/ashwin153/pre-commit-vagrant
+# vagrant-validate - Runs vagrant validate to validate Vagrantfiles
+# github.com/AleksaC/hadolint-py
+# hadolint - Lint Dockerfiles using hadolint without needing docker or system installation
+# github.com/AleksaC/circleci-cli-py
+# circle-ci-validator - Validate CircleCI config without having to install the cli globally
+# github.com/AleksaC/mirrors-cfn-nag
+# cfn-nag - Wrapper around cfn_nag_scan that allows it to be ran on multiple files within a single hook
+# github.com/cmake-lint/cmake-lint
+# cmakelint - This hook lints CMake files for style issues.
+# github.com/priv-kweihmann/oelint-adv
+# oelint-adv - Based on the OpenEmbedded Styleguide and work done by oe-stylize-tool this module offers a (nearly) complete linter for bitbake-recipes.
+# github.com/jggomez/pre-commit-android-kotlin
+# ktlint - Runs ktlint
+# unit_tests - Runs unit tests
+# build - Building App
+# github.com/Carreau/velin
+# velin - This hook attempt to reformat docstrings using numpydoc format.
+# github.com/chrismgrayftsinc/jsonnetfmt
+# jsonnetfmt - This hook formats jsonnet files
+# github.com/zricethezav/gitleaks
+# gitleaks - Detect hardcoded secrets using Gitleaks
+# gitleaks-docker - Detect hardcoded secrets using Gitleaks
+# github.com/hugoh/pre-commit-fish
+# fish_syntax - Check Fish shell syntax
+# fish_indent - Check Fish shell indentation
+# github.com/nbyl/pre-commit-license-checks
+# license-check-configuration-lint - This hook scans the the gradle dependency list againt a configured list of allowed open source licenses.
+# license-check-gradle - This hook scans the the gradle dependency list againt a configured list of allowed open source licenses.
+# license-check-maven - This hook scans the the maven dependency list againt a configured list of allowed open source licenses.
+# license-check-npm - This hook scans the package. a configured list of allowed open source licenses.
+# license-check-pipenv - This hook scans the local Pipfile against a configured list of allowed open source licenses.
+# github.com/jonasbb/pre-commit-latex-hooks
+# american-eg-ie - US English requires a comma after "e.g." and "i.e."
+# cleveref-capitalization - Ensure that \Cref at a sentence start is capitalized and nowhere else in the sentence.
+# cispa-syssec-forbidden-words - Forbidden words for CISPA SysSec
+# consistent-spelling - Ensure that all variants (specified by regex) are written the same way.
+# csquotes - Ensure the use of LaTeX csquotes and prohibits manual quotation marks.
+# ensure-labels-for-sections - Ensure each section has a matching label
+# no-space-in-cite - Ensure there are no whitespace characters in the \cite command
+# tilde-cite - Line breaks should never occur before the citation, thus they need to be protected with the ~.
+# unique-labels - Ensure each label is only defined once.
+# cleveref-instead-of-autoref - Suggest replacing \autoref with either \Cref or \cref.
+# github.com/dfm/black_nbconvert
+# black_nbconvert - Apply black to ipynb files
+# github.com/crate-ci/typos
+# typos - Source code spell checker, binary install
+# typos-docker - Source code spell checker, Docker image
+# typos-src - Source code spell checker, source install
+# github.com/snakemake/snakefmt
+# snakefmt - Snakefmt: The uncompromising Snakemake formatter
+# github.com/regebro/pyroma
+# pyroma - Check how well a Python package conforms to best practices.
+# github.com/tox-dev/tox-ini-fmt
+# tox-ini-fmt - apply a consistent format to `tox.ini` files
+# github.com/janosh/format-ipy-cells
+# format-ipy-cells - Format '# %%' cell delimiters in interactive Python notebooks. See https://code.visualstudio.com/docs/python/jupyter-support-py.
+# github.com/FalcoSuessgott/lint-gitlab-ci
+# gitlab-ci - lints .gitlab-ci.yml
+# github.com/comkieffer/xml-linter-hook
+# xmllint - Lint xml files with xmllint
+# github.com/jackdewinter/pymarkdown
+# pymarkdown - PyMarkdown - GitHub Flavored Markdown and CommonMark Compliant Linter
+# github.com/klieret/jekyll-relative-url-check
+# jekyll-relative-url-check-html - Jekyll Relative URL HTML
+# jekyll-relative-url-check-markdown - Jekyll Relative URL Markdown
+# github.com/tarioch/flux-check-hook
+# check-flux-helm-values - Verify that values used by flux HelmReleases are ok.
+# github.com/streetsidesoftware/cspell-cli
+# cspell - This hook runs CSpell spellchecker
+# github.com/rapidsai/frigate
+# frigate - Run frigate to generate documentation for your Helm charts.
+# github.com/norwoodj/helm-docs
+# helm-docs - Uses 'helm-docs' to create documentation from the Helm chart's 'values.yaml' file, and inserts the result into a corresponding 'README.md' file.
+# helm-docs-built - Uses auto built 'helm-docs' to create documentation from the Helm chart's 'values.yaml' file, and inserts the result into a corresponding 'README.md' file.
+# github.com/sqlfluff/sqlfluff
+# sqlfluff-lint - Lints sql files with `SQLFluff`
+# sqlfluff-fix - Fixes sql lint errors with `SQLFluff`
+# github.com/adamchainz/blacken-docs
+# blacken-docs - Run `black` on python code blocks in documentation files
+# github.com/adamchainz/django-upgrade
+# django-upgrade - Automatically upgrade your Django project code.
+# github.com/scop/pre-commit-shfmt
+# shfmt - Shell source code formatter (native install)
+# shfmt-docker - Shell source code formatter (Docker image)
+# github.com/scop/pre-commit-perlcritic
+# perlcritic - Perl source code critic (native install)
+# github.com/BlankSpruce/gersemi
+# gersemi - Gersemi - A formatter to make your CMake code the real treasure.
+# github.com/realm/SwiftLint
+# swiftlint - Check Swift files for issues with SwiftLint
+# gitlab.com/bmares/check-json5
+# check-json5 - checks json files for syntax parsable as json5 (with comments).
+# github.com/semaphor-dk/dansabel
+# dansabel - Checks and lints Ansible projects (YAML/Jinja2 only)
+# github.com/gitguardian/gg-shield
+# ggshield - Runs ggshield to detect hardcoded secrets, security vulnerabilities and policy breaks.
+# ggshield-iac - Runs ggshield Infra as Code Security to detect IaC vulnerabilities and policy breaks.
+# docker-ggshield - Runs ggshield to detect hardcoded secrets, security vulnerabilities and policy breaks in docker images.
+# ggshield-push - Runs ggshield to detect hardcoded secrets, security vulnerabilities and policy breaks.
+# ggshield-iac-push - Runs ggshield Infra as Code Security to detect IaC vulnerabilities and policy breaks.
+# docker-ggshield-push - Runs ggshield to detect hardcoded secrets, security vulnerabilities and policy breaks in docker images.
+# github.com/JohnnyMorganz/StyLua
+# stylua - An opinionated Lua code formatter
+# stylua-system - An opinionated Lua code formatter
+# stylua-github - An opinionated Lua code formatter. Downloads Github release
+# github.com/shssoichiro/oxipng
+# oxipng - Multithreaded PNG optimizer written in Rust.
+# github.com/datarootsio/databooks
+# databooks-meta - Remove Jupyter notebook metadata using `databooks`.
+# databooks-assert - Assert Jupyter notebook metadata values using `databooks`.
+# github.com/standard/standard
+# standard
+# github.com/Sceptre/sceptrelint
+# check-file-names - check file names
+# check-stack-tags - check stack tags
+# check-stack-names - check stack names
+# check-stack-tag-values - check stack tag values
+# github.com/lyz-code/yamlfix
+# yamlfix
+# github.com/dannysepler/rm_unneeded_f_str
+# rm-unneeded-f-str - Find and replace unneeded f-strings in your code.
+# github.com/cmhughes/latexindent.pl
+# latexindent - Run latexindent.pl (get dependencies using CPAN)
+# latexindent-conda - Run latexindent.pl (get dependencies using Conda)
+# latexindent-docker - Run latexindent.pl (get dependencies using Docker)
+# github.com/sirwart/ripsecrets
+# ripsecrets - Prevent committing secret keys into your source code
+# ripsecrets-system - Prevent committing secret keys into your source code
+# github.com/bagerard/graphviz-dot-hooks
+# check-dot - checks dot files for parseable syntax.
+# render-dot - render all .dot to .dot.png
+# github.com/omnilib/ufmt
+# ufmt - Safe, atomic formatting with black and µsort
+# github.com/daveshanley/vacuum
+# vacuum - OpenAPI linter and quality checker (native install)
+# github.com/nuztalgia/botstrap
+# detect-discord-bot-tokens - Prevents unencrypted/plaintext Discord bot tokens from being committed.
+# detect-encrypted-tokens - Prevents files containing Botstrap-encrypted tokens from being committed.
+# gitlab.com/adam-moss/pre-commit-trailer
+# add-pre-commit-config-trailer - add a commit message trailer indicating pre-commit has been used
+# add-pre-commit-user-skipped-trailer - add a commit message trailer indicating pre-commit hooks skipped
+# gitlab.com/adam-moss/pre-commit-ssh-git-signing-key
+# add-ssh-git-signing-key - add the configured git signing key to the ssh-agent if it isn't already present
+# remove-ssh-git-signing-key - remove the configured git signing key from the ssh-agent if it is still present
+# github.com/charliermarsh/ruff-pre-commit
+# ruff - Run 'ruff' for extremely fast Python linting
+# github.com/mrtazz/checkmake
+# checkmake - Makefile linter/analyzer
+# checkmake-system - Makefile linter/analyzer
+# github.com/jshwi/docsig
+# docsig - check signature params for proper documentation
+# github.com/finsberg/clang-format-docs
+# clang-format-docs - Run `clang-format` on C++ code blocks in documentation files.
+# github.com/rubocop/rubocop
+# rubocop - Enforce the community Ruby Style Guide with RuboCop
+# github.com/dbt-checkpoint/dbt-checkpoint
+# check-column-desc-are-same - Check the models have same descriptions for same column names.
+# check-column-name-contract - Check column name abides to contract.
+# check-macro-has-description - Ensures that the macro has description in properties file.
+# check-macro-arguments-have-desc - Ensures that the macro has arguments with descriptions in properties file.
+# check-model-columns-have-desc - Ensures that the model has columns with descriptions in properties file.
+# check-model-has-all-columns - Ensures that all columns in database are specified in properties file.
+# check-model-has-description - Ensures that the model has description in properties file.
+# check-model-has-meta-keys - Ensures that the model has a list of valid meta keys.
+# check-model-has-properties-file - Ensures that the model has properties file (schema file).
+# check-model-has-tests-by-group - Ensures that the model has a number of tests from a group of tests.
+# check-model-has-tests-by-name - Ensures that the model has a number of tests of a certain name (e.g. data, unique).
+# check-model-has-tests-by-type - Ensures that the model has a number of tests of a certain type (data, schema).
+# check-model-has-tests - Ensures that the model has a number of tests.
+# check-model-name-contract - Check model name abides to contract.
+# check-model-parents-schema - Check parent models or sources are from certain schema
+# check-model-parents-database - Check parent models or sources are from certain database
+# check-model-parents-and-childs - Ensures the model has a specific number (max/min) of parents or/and childs.
+# check-model-tags - Ensures that the model has only valid tags from the provided list.
+# check-script-has-no-table-name - Ensures that the script is using only source or ref macro to specify the table name.
+# check-script-ref-and-source - Ensures that the script contains only existing sources or macros.
+# check-script-semicolon - Ensure that the script does not have a semicolon at the end of the file.
+# check-source-childs - Ensures the source has a specific number (max/min) of childs.
+# check-source-columns-have-desc - Ensures that the source has columns with descriptions in the properties file.
+# check-source-has-all-columns - Ensures that all columns in the database are specified in the properties file.
+# check-source-table-has-description - Ensures that the source table has description in properties file.
+# check-source-has-freshness - Ensures that the source has freshness options.
+# check-source-has-loader - Ensures that the source has loader option.
+# check-source-has-meta-keys - Ensures that the source has a list of valid meta keys.
+# check-source-has-tests-by-name - Ensures that the source has a number of tests of a certain name (e.g. data, unique).
+# check-source-has-tests-by-type - Ensures that the source has a number of tests of a certain type (data, schema).
+# check-source-has-tests-by-group - Ensures that the source has a number of tests of a certain group (unique, unique-combination-of-columns).
+# check-source-has-tests - Ensures that the source has a number of tests.
+# check-source-tags - Ensures that the source has only valid tags from the provided list.
+# dbt-clean - Deletes all folders specified in the clean-targets.
+# dbt-compile - Generates executable SQL from source model, test, and analysis files.
+# dbt-deps - Pulls the most recent version of the dependencies listed in your packages.yml.
+# dbt-docs-generate - The command is responsible for generating your project's documentation website.
+# dbt-run - Executes compiled sql model files.
+# dbt-test - Runs tests on data in deployed models.
+# generate-missing-sources - If any source is missing this hook tries to create it.
+# generate-model-properties-file - Generate model properties file if does not exists.
+# unify-column-description - Unify column descriptions across all models
+# replace-script-table-names - Replace table names with source or ref macros in the script.
+# remove-script-semicolon - Remove semicolon at the end of the script.
+# gitlab.com/engmark/vcard
+# vcard - vCard validator
+# github.com/Data-Liberation-Front/csvlint.rb
+# csvlint
+# github.com/christopher-hacker/enforce-notebook-run-order
+# enforce-notebook-run-order - Ensure that committed Jupyter notebooks aren't run out of order
+# github.com/mxr/unkey
+# unkey - Automatically remove extra calls to keys().
+# github.com/Mateusz-Grzelinski/actionlint-py
+# actionlint - Lint GitHub workflows with actionlint
